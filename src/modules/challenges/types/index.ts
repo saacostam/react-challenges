@@ -9,6 +9,8 @@ export enum TChallengeDifficulty {
 export interface TChallenge {
   id: string;
   name: string;
+  description: string;
   component: FC;
   difficulty: TChallengeDifficulty;
+  icon?: FC;
 }
