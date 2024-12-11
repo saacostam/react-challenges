@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 export interface TIconProps {
-    className?: string;
+  className?: string;
 }
 
-export type TIcon = FC<TIconProps>
+export type TIcon = FC<TIconProps>;

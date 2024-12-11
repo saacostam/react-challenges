@@ -1,5 +1,3 @@
-export function DumbFC(){
-    return (
-        <></>
-    )
+export function DumbFC() {
+  return <></>;
 }

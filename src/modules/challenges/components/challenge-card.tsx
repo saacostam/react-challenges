@@ -1,32 +1,32 @@
 import { twMerge } from "tailwind-merge";
 import { TRoute, useGetRoutes } from "../../router";
-import { TChallenge } from "../types"
+import { TChallenge } from "../types";
 
 export interface TChallengeCardProps {
-    challenge: TChallenge;
-    className?: string;
+  challenge: TChallenge;
+  className?: string;
 }
 
-export function ChallengeCard({
-    challenge,
-    className,
-}: TChallengeCardProps) {
-    const router = useGetRoutes();
+export function ChallengeCard({ challenge, className }: TChallengeCardProps) {
+  const router = useGetRoutes();
 
-    return (
-        <div className={twMerge("card bg-base-100 shadow-xl", className)}>
-            <div className="card-body">
-                <h2 className="card-title">{challenge.name}</h2>
-                <p>{challenge.description}</p>
-                <div className="card-actions justify-end">
-                    <a className="btn btn-accent" href={router.getHref({
-                        type: TRoute.CHALLENGE_BY_ID,
-                        id: challenge.id,
-                    })}>
-                        Check it out!
-                    </a>
-                </div>
-            </div>
+  return (
+    <div className={twMerge("card bg-base-100 shadow-xl", className)}>
+      <div className="card-body">
+        <h2 className="card-title">{challenge.name}</h2>
+        <p>{challenge.description}</p>
+        <div className="card-actions justify-end">
+          <a
+            className="btn btn-accent"
+            href={router.getHref({
+              type: TRoute.CHALLENGE_BY_ID,
+              id: challenge.id,
+            })}
+          >
+            Check it out!
+          </a>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
