@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { FC } from "react";
 
 export enum TChallengeDifficulty {
   EASY = "Easy",
@@ -9,6 +9,6 @@ export enum TChallengeDifficulty {
 export interface TChallenge {
   id: string;
   name: string;
-  component: ReactNode;
+  component: FC;
   difficulty: TChallengeDifficulty;
 }
