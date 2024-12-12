@@ -1,5 +1,6 @@
 import { getUuid } from "../../string.utils";
-import { DumbFC, TChallenge, TChallengeDifficulty } from "../../challenges";
+import { DumbFC } from "../components";
+import { TChallenge, TChallengeDifficulty } from "../types";
 
 export const CHALLENGES: TChallenge[] = [
   {
